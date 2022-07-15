@@ -1,14 +1,12 @@
-import { Box, Heading, Input } from "native-base";
+import { Box, Heading, Input, Text, Button,Center,Image,Stack, AspectRatio } from "native-base";
 import React from "react";
-import { Text } from "react-native";
-import { Button } from "native-base";
-import { Center } from "native-base";
-import { Image } from "react-native-svg";
-import { AspectRatio } from "native-base";
-import { Stack } from "native-base";
-import { HStack } from "native-base";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
-export const WelcomeScreen = () => {
+
+interface Props extends NativeStackScreenProps<any, any>{}
+
+
+export const HomeScreen = ({navigation}: Props) => {
     return (
         
         <Box  bg={'blue.400'} 
@@ -29,7 +27,7 @@ export const WelcomeScreen = () => {
        </Text>
 
        <Box alignItems="center">
-      <Button onPress={() => console.log("hello world")}>Cerrar Sesion</Button>
+      <Button onPress={() => navigation.replace('WelcomeScreen')}>Cerrar Sesion</Button>
     </Box>
       
 

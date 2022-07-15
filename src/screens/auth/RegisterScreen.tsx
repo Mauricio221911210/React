@@ -8,7 +8,7 @@ interface Props extends NativeStackScreenProps<any, any>{}
 
 
 
-export const WelcomeScreen = ({navigation}: Props) => {
+export const RegisterScreen = ({navigation}: Props) => {
     return (
         <Box  bg={'blue.400'} 
         alignItems={'center'}  
@@ -20,12 +20,18 @@ export const WelcomeScreen = ({navigation}: Props) => {
         w={Dimensions.get('window').width}
         h={Dimensions.get('window').height}>
             
-            
-
             <Heading>
-          Carrito
+            Formulario de Registro
             </Heading>
 
+
+
+
+         <Button onPress={() => navigation.replace('LoginScreen')}>
+         <Text isTruncated maxW="300" w="80%" bold italic underline>
+     ¿No tienes Cuenta? Registrate 
+       </Text>
+       </Button>
         </Box>
         
 
