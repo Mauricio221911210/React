@@ -20,14 +20,16 @@ export const TabNavigator = ()  =>{
 }}>
 <Tab.Screen name="HomeScreen" component={HomeScreen} options={{
  title: 'Productos',
- tabBarIcon:()=> { return(<Ionicons name="layers-outline" size={30} color={'#E0025'}/>)}
+ tabBarIcon:()=> { return(<Ionicons name="logo-dropbox" size={30} color={'#E0025'}/>)}
 }} />
 <Tab.Screen name="WelcomeScreen" component={WelcomeScreen}  options={{
-    title: 'Carrito',
-    tabBarIcon:()=> { return(<Ionicons name="game-controller-outline" size={30} color={'#E0025'}/>)}
+    title: 'Perfil',
+    tabBarIcon:()=> { return(<Ionicons name="person-circle-outline" size={30} color={'#E0025'}/>)}
 }} />
 
 </Tab.Navigator>
 
     );
 };
+
+

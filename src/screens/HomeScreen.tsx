@@ -12,6 +12,7 @@ import {
 import React from 'react';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
+
 interface Props extends NativeStackScreenProps<any, any> {}
 
 export const HomeScreen = ({navigation}: Props) => {
@@ -21,19 +22,23 @@ export const HomeScreen = ({navigation}: Props) => {
       alignItems={'center'}
       justifyContent={'center'}
       flexDir={'column'}>
+
       <Center>
+      
         <Image
           source={require('../assets/images/logo.jpg')}
           alt="Alternate Text"
-          size="xl"
+          w={'64'}
+          h={'50%'}
+          zIndex={99}
+          borderRadius={20}
         />
-      </Center>
+        </Center>
+        <Box>
 
-      <Text isTruncated maxW="300" w="80%" bold italic underline>
-        Bienvenido Mauricio
-      </Text>
-
-      <Box alignItems="center">
+        <Text isTruncated maxW="300" w="80%" bold italic underline >
+          Bienvenido Mauricio
+        </Text>
         <Button onPress={() => navigation.replace('LoginScreen')}>
           Cerrar Sesion
         </Button>
@@ -64,12 +69,12 @@ export const HomeScreen = ({navigation}: Props) => {
             <Box>
               <AspectRatio w="100%" ratio={16 / 9}>
                 <Image
-                  source={
-                    {
-                      //image
-                    }
-                  }
-                  alt="image"
+                  source={require('../assets/images/gelatinas.jpg')}
+                  alt="Alternate Text"
+                  w={'64'}
+                  h={'50%'}
+                  zIndex={99}
+                  borderRadius={20}
                 />
               </AspectRatio>
               <Center
@@ -94,10 +99,11 @@ export const HomeScreen = ({navigation}: Props) => {
             </Stack>
           </Box>
         </Box>
-        ;
         <Box>
           <Box
-            maxW="50%"
+            w={'70%'}
+            h={'50%'}
+            justifyContent={'center'}
             rounded="lg"
             overflow="hidden"
             borderColor="coolGray.200"
@@ -109,12 +115,12 @@ export const HomeScreen = ({navigation}: Props) => {
             <Box>
               <AspectRatio w="100%" ratio={16 / 9}>
                 <Image
-                  source={
-                    {
-                      //image
-                    }
-                  }
-                  alt="image"
+                  source={require('../assets/images/tamborcito.jpg')}
+                  alt="Alternate Text"
+                  w={'64'}
+                  h={'50%'}
+                  zIndex={99}
+                  borderRadius={20}
                 />
               </AspectRatio>
               <Center
@@ -153,12 +159,12 @@ export const HomeScreen = ({navigation}: Props) => {
           <Box>
             <AspectRatio w="100%" ratio={16 / 9}>
               <Image
-                source={
-                  {
-                    //image
-                  }
-                }
-                alt="image"
+                source={require('../assets/images/gelatinas.jpg')}
+                alt="Alternate Text"
+                w={'64'}
+                h={'50%'}
+                zIndex={99}
+                borderRadius={20}
               />
             </AspectRatio>
             <Center
