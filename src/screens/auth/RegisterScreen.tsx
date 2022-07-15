@@ -1,5 +1,5 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { Box, Heading, Input, Center, Button, Image, Text } from "native-base";
+import { Box, Heading, Input, Center, Button, Image, Text, Link } from "native-base";
 import React from "react";
 import { Dimensions } from "react-native";
 
@@ -19,19 +19,31 @@ export const RegisterScreen = ({navigation}: Props) => {
         top={0}
         w={Dimensions.get('window').width}
         h={Dimensions.get('window').height}>
-            
-            <Heading>
-            Formulario de Registro
-            </Heading>
 
-
-
-
-         <Button onPress={() => navigation.replace('LoginScreen')}>
-         <Text isTruncated maxW="300" w="80%" bold italic underline>
-     ¿No tienes Cuenta? Registrate 
+<Text textAlign={'center'} mb={7} fontSize={'lg'} color={'white'} >
+      Formulario de Registro 
        </Text>
-       </Button>
+            
+            <Center mt={-24}>
+            <Image
+          source={require('../../assets/images/logo.jpg')
+        } alt="Alternate Text" w={'64'} h={'50%'}  zIndex={99} 
+        borderRadius={20}/>
+     
+    </Center>
+
+         <Box mt={'-32'}  pt={'10'} bg={'blue.200'} >
+         <Input mx="3" variant={"rounded"} bg="white" mb={'4'} placeholder="Nombre" w="75%"  />
+         <Input mx="3" variant={"rounded"} bg="white" mb={'4'} placeholder="Correo Electronico" w="75%"  />
+         <Input mx="3" variant={"rounded"} bg="white" mb={'4'} placeholder="Telefono" w="75%"  />
+         <Input mx="3" variant={"rounded"} bg="white" mb={'4'} placeholder="Contraseña" w="75%"  />
+         <Input mx="3" variant={"rounded"} bg="white" mb={'4'} placeholder="Repetir Contraseña" w="75%"  />
+       <Box alignItems="center">
+      <Button onPress={() => navigation.replace("LoginScreen")} mb={4}>Registrarme</Button>
+    </Box>
+         </Box> 
+
+         
         </Box>
         
 

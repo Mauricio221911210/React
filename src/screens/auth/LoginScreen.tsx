@@ -1,5 +1,5 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { Box, Heading, Input, Center, Button, Image, Text } from "native-base";
+import { Box, Heading, Input, Center, Button, Image, Text, Link } from "native-base";
 import React from "react";
 import { Dimensions } from "react-native";
 
@@ -20,28 +20,30 @@ export const LoginScreen = ({navigation}: Props) => {
         w={Dimensions.get('window').width}
         h={Dimensions.get('window').height}>
             
-            <Center>
-      <Image source={{
-      uri: "https://wallpaperaccess.com/full/317501.jpg"
-    }} alt="Alternate Text" size="xl" />
+            <Center mt={-24}>
+            <Image
+          source={require('../../assets/images/logo.jpg')
+        } alt="Alternate Text" w={'64'} h={'50%'}  zIndex={99} 
+        borderRadius={20}/>
+     
     </Center>
 
-         <Box h={'50%'} bg={'blue.200'} alignItems="center">
-         <Input mx="3" placeholder="Correo Electronico" w="75%"  />
-         <Input mx="3" placeholder="Contraseña" w="75%"  />
-         <Text isTruncated maxW="300" w="80%">
+         <Box mt={'-32'}  pt={'10'} bg={'blue.200'} >
+         <Input  mx="3" variant={"rounded"} bg="white" mb={'4'} placeholder="Correo Electronico" w="75%"  />
+         <Input mx="3" variant={"rounded"} bg="white" mb={'4'} placeholder="Contraseña" w="75%"  />
+         <Text isTruncated maxW="300" w="80%" textAlign={'right'} mb={2} ml={4}>
          ¿Olvidaste la Contraseña?
        </Text>
        <Box alignItems="center">
-      <Button onPress={() => navigation.replace("TabNavigator")}>Inicio de Sesion</Button>
-    </Box>;
+      <Button onPress={() => navigation.replace("TabNavigator")} mb={4}>Inicio de Sesion</Button>
+    </Box>
          </Box> 
 
-         <Button onPress={() => navigation.replace('RegisterScreen')}>
-         <Text isTruncated maxW="300" w="80%" bold italic underline>
-     ¿No tienes Cuenta? Registrate 
+         <Link onPress={() => navigation.replace('RegisterScreen')} mt={4}  >
+         <Text textAlign={'center'} underline  >
+      Registrate 
        </Text>
-       </Button>
+       </Link>
         </Box>
         
 
