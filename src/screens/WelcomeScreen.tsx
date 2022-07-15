@@ -2,6 +2,9 @@ import { Box, Heading, Input } from "native-base";
 import React from "react";
 import { Text } from "react-native";
 import { Button } from "native-base";
+import { Image } from "react-native-svg";
+import { Center } from "native-base";
+
 
 export const WelcomeScreen = () => {
     return (
@@ -10,7 +13,11 @@ export const WelcomeScreen = () => {
         justifyContent={'center'} 
         flexDir={'column'}>
             
-         
+            <Center>
+      <Image source={{
+      uri: "https://wallpaperaccess.com/full/317501.jpg"
+    }} alt="Alternate Text" size="xl" />
+    </Center>
 
          <Box h={'50%'} bg={'blue.200'} alignItems="center">
          <Input mx="3" placeholder="Correo Electronico" w="75%"  />
