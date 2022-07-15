@@ -1,4 +1,5 @@
 package com.frefrigel;
+import android.os.Bundle;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -14,6 +15,7 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "Frefrigel";
   }
+  
 
   /**
    * Returns the instance of the {@link ReactActivityDelegate}. There the RootView is created and
