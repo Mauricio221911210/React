@@ -15,9 +15,9 @@ export const HomeScreen = ({navigation}: Props) => {
         flexDir={'column'}>
 
             <Center>
-      <Image source={{
-      uri: "https://wallpaperaccess.com/full/317501.jpg"
-    }} alt="Alternate Text" size="xl" />
+      <Image source={
+      require("../assets/images/logo.jpg")
+    } alt="Alternate Text" size="xl" />
     </Center>
 
            
@@ -27,7 +27,7 @@ export const HomeScreen = ({navigation}: Props) => {
        </Text>
 
        <Box alignItems="center">
-      <Button onPress={() => navigation.replace('WelcomeScreen')}>Cerrar Sesion</Button>
+      <Button onPress={() => navigation.replace('LoginScreen')}>Cerrar Sesion</Button>
     </Box>
       
 
