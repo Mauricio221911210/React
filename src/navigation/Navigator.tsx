@@ -1,11 +1,11 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
-import {WelcomeScreen} from '../screens/WelcomeScreen';
+import {ProfileScreen} from '../screens/profile/ProfileScreen';
 import {HomeScreen} from '../screens/HomeScreen';
 import {LoginScreen} from '../screens/auth/LoginScreen';
 import {RegisterScreen} from '../screens/auth/RegisterScreen';
 import {TabNavigator} from './TabNavigator';
-import { CarScreen } from '../screens/CarScreen';
+import { CarScreen } from '../screens/cart/CarScreen';
 
 const Stack = createNativeStackNavigator();
 export const Navigator = () => {
@@ -35,8 +35,8 @@ export const Navigator = () => {
       <Stack.Screen name="TabNavigator" component={TabNavigator} />
 
       <Stack.Screen
-        name="WelcomeScreen"
-        component={WelcomeScreen}
+        name="ProfileScreen"
+        component={ProfileScreen}
         options={{
           title: 'Frefrigel',
         }}

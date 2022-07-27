@@ -26,8 +26,8 @@ export const RegisterScreen = ({navigation}: Props) => {
             
             <Center mt={-24}>
             <Image
-          source={require('../../assets/images/logo.jpg')
-        } alt="Alternate Text" w={'64'} h={'50%'}  zIndex={99} 
+          source={require('../../assets/images/logo1_1.jpg')
+        } alt="Alternate Text" w={'64'} h={'41%'}  zIndex={99} 
         borderRadius={20}/>
      
     </Center>

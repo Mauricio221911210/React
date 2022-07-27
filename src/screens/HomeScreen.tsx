@@ -26,10 +26,10 @@ export const HomeScreen = ({navigation}: Props) => {
       <Center>
       
         <Image
-          source={require('../assets/images/logo.jpg')}
+          source={require('../assets/images/logo1_1.jpg')}
           alt="Alternate Text"
           w={'64'}
-          h={'50%'}
+          h={'41%'}
           zIndex={99}
           borderRadius={20}
         />

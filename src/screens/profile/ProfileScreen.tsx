@@ -5,7 +5,7 @@ import {Dimensions} from 'react-native';
 
 interface Props extends NativeStackScreenProps<any, any> {}
 
-export const CarScreen = ({navigation}: Props) => {
+export const ProfileScreen = ({navigation}: Props) => {
   return (
     <Box
       bg={'blue.200'}
@@ -18,41 +18,34 @@ export const CarScreen = ({navigation}: Props) => {
       w={Dimensions.get('window').width}
       h={Dimensions.get('window').height}>
       
-      <Text textAlign={'center'} mb={100} fontSize={'lg'} >
-      Carrito
-       </Text>
+
       <Center mt={-24}>
         <Image
-          source={require('../assets/images/car.jpg')}
+          source={require('../../assets/images/logo1_1.jpg')}
           alt="Alternate Text"
           w={'64'}
-          h={'50%'}
+          h={'41%'}
           zIndex={99}
           borderRadius={20}
-           size="md"
         />
       </Center>
 
-      <Box mt={'-30'} pt={'10'} bg={'blue.200'}>
+      <Box mt={'-32'} pt={'10'} bg={'blue.200'}>
         <Text isTruncated maxW="300" w="80%" textAlign={'right'} mb={2} ml={4}>
-          Producto: Gelatinas
-        </Text>
-        <Image
-          source={require('../assets/images/gelatinas.jpg')}
-          alt="Alternate Text"
-          w={'64'}
-          h={'50%'}
-          zIndex={99}
-          borderRadius={20}
-           size="sm"
-        />
-        <Text isTruncated maxW="300" w="80%" textAlign={'right'} mb={2} ml={4}>
-          Costo: 30$
+          Nombre: Irvin Mauricio
         </Text>
         <Text isTruncated maxW="300" w="80%" textAlign={'right'} mb={2} ml={4}>
-         Cantidad: 5pz
+          Telefono: 7291345747
         </Text>
-        
+        <Text isTruncated maxW="300" w="80%" textAlign={'right'} mb={2} ml={4}>
+          Email: al221911210@gmail.com
+        </Text>
+        <Text isTruncated maxW="300" w="80%" textAlign={'right'} mb={2} ml={4}>
+          Tipo Usuario: Cliente
+        </Text>
+      </Box>
+      <Box  >
+      <Button onPress={() => navigation.replace("LoginScreen")} mb={4}>Cerrar Sesion</Button>
       </Box>
     </Box>
   );
