@@ -5,6 +5,7 @@ import {HomeScreen} from '../screens/HomeScreen';
 import {LoginScreen} from '../screens/auth/LoginScreen';
 import {RegisterScreen} from '../screens/auth/RegisterScreen';
 import {TabNavigator} from './TabNavigator';
+import { CarScreen } from '../screens/CarScreen';
 
 const Stack = createNativeStackNavigator();
 export const Navigator = () => {
@@ -30,6 +31,7 @@ export const Navigator = () => {
         }}
       />
 
+
       <Stack.Screen name="TabNavigator" component={TabNavigator} />
 
       <Stack.Screen
@@ -46,6 +48,14 @@ export const Navigator = () => {
         options={{
           title: 'Frefrigel',
         }}
+      />
+
+<Stack.Screen
+        name="CarScreen"
+        component={CarScreen}
+        options={{
+          title: 'Frefrigel',
+        }}        
       />
     </Stack.Navigator>
   );
