@@ -10,14 +10,20 @@ import {
   AspectRatio,
   ScrollView,
 } from 'native-base';
-import React from 'react';
+import React, { useEffect } from 'react';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import { Dimensions } from 'react-native';
+import API from '../api/api';
 
 
 interface Props extends NativeStackScreenProps<any, any> {}
 
 export const HomeScreen = ({navigation}: Props) => {
+  useEffect(()=>{
+    API.get('/products').then(resp=>{
+      console.log (resp) 
+    }).catch(console.log)
+  },[] ) 
   return (
     <>
      <Box
@@ -49,6 +55,46 @@ export const HomeScreen = ({navigation}: Props) => {
           </Text>
         </Box>
        </Box>
+
+
+       <Box w={'40'} h={'56'} bg={'blue.200'} flexDirection={'column'} shadow={'9'} mx={2}>
+            <Box borderWidth={2} h={'70%'} borderColor={'blue.400'}>
+        <Image 
+        source={require('../assets/images/gelatinas.jpg')}
+        resizeMode={'stretch'}
+        h={'100%'}
+        />        
+        </Box>
+        <Box h={'30%'} alignItems={'center'}>
+          <Text h={'50%'} color={'black'} fontSize={'md'}>
+              Nombre del producto
+          </Text>
+          <Text h={'50%'} bold fontSize={'lg'}>
+              $50
+          </Text>
+        </Box>
+       </Box>
+
+
+       <Box w={'40'} h={'56'} bg={'blue.200'} flexDirection={'column'} shadow={'9'} mx={2}>
+            <Box borderWidth={2} h={'70%'} borderColor={'blue.400'}>
+        <Image 
+        source={require('../assets/images/gelatinas.jpg')}
+        resizeMode={'stretch'}
+        h={'100%'}
+        />        
+        </Box>
+        <Box h={'30%'} alignItems={'center'}>
+          <Text h={'50%'} color={'black'} fontSize={'md'}>
+              Nombre del producto
+          </Text>
+          <Text h={'50%'} bold fontSize={'lg'}>
+              $50
+          </Text>
+        </Box>
+       </Box>
+
+
         </ScrollView>
       <Heading ml={2} color={'black'} textAlign={'center'}>
            Nuevos productos  
@@ -64,6 +110,29 @@ export const HomeScreen = ({navigation}: Props) => {
         />        
         </Box>
       </Box>
+
+      <Box w={'40'} h={'40'} bg={'blue.200'} flexDirection={'column'} shadow={'9'} mx={2}>
+            <Box borderWidth={2} h={'100%'} borderColor={'blue.700'}>
+        <Image 
+        source={require('../assets/images/gelatinas.jpg')}
+        resizeMode={'stretch'}
+        h={'100%'}
+        alt='gelatinas'
+        />        
+        </Box>
+      </Box>
+
+      <Box w={'40'} h={'40'} bg={'blue.200'} flexDirection={'column'} shadow={'9'} mx={2}>
+            <Box borderWidth={2} h={'100%'} borderColor={'blue.700'}>
+        <Image 
+        source={require('../assets/images/gelatinas.jpg')}
+        resizeMode={'stretch'}
+        h={'100%'}
+        alt='gelatinas'
+        />        
+        </Box>
+      </Box>
+
     </ScrollView>
     </Box>
    </>
