@@ -6,6 +6,7 @@ import {LoginScreen} from '../screens/auth/LoginScreen';
 import {RegisterScreen} from '../screens/auth/RegisterScreen';
 import {TabNavigator} from './TabNavigator';
 import { CarScreen } from '../screens/cart/CarScreen';
+import { DetailScreen } from '../screens/product/DetailScreen';
 
 const Stack = createNativeStackNavigator();
 export const Navigator = () => {
@@ -14,7 +15,7 @@ export const Navigator = () => {
       screenOptions={{
         headerTitleAlign: 'center',
         headerTintColor: '#33FFF0',
-        headerShown: false,
+        headerShown: true,
       }}>
       <Stack.Screen
         name="LoginScreen"
@@ -55,6 +56,13 @@ export const Navigator = () => {
         component={CarScreen}
         options={{
           title: 'Frefrigel',
+        }}        
+      />
+      <Stack.Screen
+        name="DetailScreen"
+        component={DetailScreen}
+        options={{
+          title: 'detalle',
         }}        
       />
     </Stack.Navigator>
