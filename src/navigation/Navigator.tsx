@@ -61,7 +61,7 @@ export const Navigator = () => {
         name="DetailScreen"
         component={DetailScreen}
         options={{
-          title: 'detalle',
+          title: 'Detalle del Producto',
           headerShown: true
         }}        
       />
