@@ -14,8 +14,7 @@ export const Navigator = () => {
     <Stack.Navigator
       screenOptions={{
         headerTitleAlign: 'center',
-        headerTintColor: '#33FFF0',
-        headerShown: true,
+        headerShown: false,
       }}>
       <Stack.Screen
         name="LoginScreen"
@@ -63,6 +62,7 @@ export const Navigator = () => {
         component={DetailScreen}
         options={{
           title: 'detalle',
+          headerShown: true
         }}        
       />
     </Stack.Navigator>
